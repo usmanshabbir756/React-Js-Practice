@@ -1,11 +1,9 @@
-import Page from "./components/Page";
+import PagesList from "./components/PagesList";
 
 function App() {
   return (
   <main> 
-    <Page author="Usman" body="React js is awesome!" />
-    <Page author="UMAR" body="jAVA is awesome!" />
-  
+    <PagesList />
   </main>
   );
 }
