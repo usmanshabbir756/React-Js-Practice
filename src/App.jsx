@@ -1,5 +1,13 @@
+import Page from "./components/Page";
+
 function App() {
-  return <h1>Hello World!</h1>;
+  return (
+  <main> 
+    <Page author="Usman" body="React js is awesome!" />
+    <Page author="UMAR" body="jAVA is awesome!" />
+  
+  </main>
+  );
 }
 
 export default App;
