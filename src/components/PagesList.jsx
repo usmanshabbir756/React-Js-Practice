@@ -4,14 +4,10 @@ import Page from "./Page"
 import classes from './PagesList.module.css'
 import { useState } from "react";
 
-function PagesList() {
-  const [modelIsVisible , setModelIsVisible] = useState(true);
+function PagesList({onCloseModel , isCreatePostVisible}) {
+  
   const [enteredBody,setEnteredBody]= useState('');
   const [enteredAuthor,setEnteredAuthor]= useState('');
-
-  function hideModelHandler(){
-    setModelIsVisible(false)
-  }
 
   function bodyChangeHandler(e){
       setEnteredBody(e.target.value);
@@ -24,8 +20,8 @@ function PagesList() {
 
   return (
     <>
-    {modelIsVisible && (
-      <Model hideModel={hideModelHandler}>
+    {isCreatePostVisible && (
+      <Model hideModel={onCloseModel}>
       <NewPost
         onBodyChange={bodyChangeHandler}  
         onAuthorChange={authorChangeHandler}
